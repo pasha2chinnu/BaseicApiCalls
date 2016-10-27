@@ -1,0 +1,6 @@
+framework module Pods_Opi9 {
+  umbrella header "Pods-Opi9-umbrella.h"
+
+  export *
+  module * { export * }
+}
