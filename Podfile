@@ -6,8 +6,7 @@ platform :ios, '8.0'
 target 'Opi9' do
   use_frameworks!
 
-pod 'Alamofire'
-
+end
   # Pods for Opi9
 
   target 'Opi9Tests' do
@@ -20,4 +19,4 @@ pod 'Alamofire'
     # Pods for testing
   end
 
-end
+
