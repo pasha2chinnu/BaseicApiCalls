@@ -19,6 +19,9 @@
 		9B19E1351DC208D90040E065 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19E1341DC208D90040E065 /* SignUpViewController.swift */; };
 		9B19E1381DC209260040E065 /* Opi9ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19E1371DC209260040E065 /* Opi9ApiCalls.swift */; };
 		9B19E13A1DC2127A0040E065 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9B19E1391DC2127A0040E065 /* .gitignore */; };
+		9B70AF4E1DC3965800ED5886 /* HumOSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4B1DC3965800ED5886 /* HumOSError.swift */; };
+		9B70AF4F1DC3965800ED5886 /* HumOSNetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4C1DC3965800ED5886 /* HumOSNetworkRequests.swift */; };
+		9B70AF501DC3965800ED5886 /* NetworkInterface-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4D1DC3965800ED5886 /* NetworkInterface-1.swift */; };
 		D8418ED0FEE29770360ED34C /* libPods-Opi9UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD0EEBD952F5D3CA021F761 /* libPods-Opi9UITests.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		9B19E1341DC208D90040E065 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9B19E1371DC209260040E065 /* Opi9ApiCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opi9ApiCalls.swift; sourceTree = "<group>"; };
 		9B19E1391DC2127A0040E065 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9B70AF4B1DC3965800ED5886 /* HumOSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumOSError.swift; sourceTree = "<group>"; };
+		9B70AF4C1DC3965800ED5886 /* HumOSNetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumOSNetworkRequests.swift; sourceTree = "<group>"; };
+		9B70AF4D1DC3965800ED5886 /* NetworkInterface-1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkInterface-1.swift"; sourceTree = "<group>"; };
 		ACD0EEBD952F5D3CA021F761 /* libPods-Opi9UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Opi9UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA175EB72C9C5183959D0C2 /* Pods-Opi9UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opi9UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opi9UITests/Pods-Opi9UITests.release.xcconfig"; sourceTree = "<group>"; };
 		DFF7F1951F4699A40761567A /* Pods-Opi9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opi9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opi9/Pods-Opi9.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				9B19E1371DC209260040E065 /* Opi9ApiCalls.swift */,
+				9B70AF4B1DC3965800ED5886 /* HumOSError.swift */,
+				9B70AF4C1DC3965800ED5886 /* HumOSNetworkRequests.swift */,
+				9B70AF4D1DC3965800ED5886 /* NetworkInterface-1.swift */,
 			);
 			name = Handlers;
 			sourceTree = "<group>";
@@ -473,8 +482,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B70AF4E1DC3965800ED5886 /* HumOSError.swift in Sources */,
 				9B19E1351DC208D90040E065 /* SignUpViewController.swift in Sources */,
+				9B70AF501DC3965800ED5886 /* NetworkInterface-1.swift in Sources */,
 				9B19E1081DC2086F0040E065 /* ViewController.swift in Sources */,
+				9B70AF4F1DC3965800ED5886 /* HumOSNetworkRequests.swift in Sources */,
 				9B19E1061DC2086F0040E065 /* AppDelegate.swift in Sources */,
 				9B19E1381DC209260040E065 /* Opi9ApiCalls.swift in Sources */,
 			);

@@ -12,8 +12,8 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        signupUser()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +22,29 @@ class SignUpViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func signupUser() {
+//    Opi9ApiCalls.sharedInstance.signUpUser()
+        let params = [ "firstname":"new",
+                       "lastname": "user",
+                       "email": "user@new.com",
+                       "password": "1234",
+                       "phone": "890765478",
+                       "usertypereg": "yes",
+                       "gender": "male"
+        ]
+        
+        NetworkInterface.fetchJSON(.signup, headers: nil, payload: params, requestCompletionHander: {(success, data, response,error) in
+            if success == true, let data = data{
+               
+                
+                
+                DispatchQueue.main.async {
+                    
+                }
+            }
+        })
+        
+    
+    
     }
-    */
-
 }
