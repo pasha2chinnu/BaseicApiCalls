@@ -13,7 +13,7 @@ class Opi9ApiCalls: NSObject {
     let baseurl = "https://quiet-reef-36650.herokuapp.com"
 
     
-    
+  /*
      func signUpUser(firstName:String,lastName:String,email:String,password:String,phoneNumber:NSNumber,userTyperegister:Bool,gender:String) {
 
         let postEndPoint = NSURL(string:"\(baseurl)/users/signup.json");
@@ -36,7 +36,7 @@ class Opi9ApiCalls: NSObject {
         }
     
     }
-    
+    */
     
     
     

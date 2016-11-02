@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum HumOSNetworkError : Error {
+enum Opi9NetworkError : Error {
     case httpStatus201
     case httpStatus204
     case httpStatus400

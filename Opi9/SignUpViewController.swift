@@ -24,9 +24,9 @@ class SignUpViewController: UIViewController {
 
     func signupUser() {
 //    Opi9ApiCalls.sharedInstance.signUpUser()
-        let params = [ "firstname":"new",
-                       "lastname": "user",
-                       "email": "user@new.com",
+        let params = [ "firstname":"new1",
+                       "lastname": "user1",
+                       "email": "user1@new.com",
                        "password": "1234",
                        "phone": "890765478",
                        "usertypereg": "yes",

@@ -10,13 +10,13 @@ import Foundation
 
 
 
-typealias HumOSRequestCompletionType = (Bool, NSDictionary?, URLResponse?, Error?) -> (Void)
+typealias Opi9RequestCompletionType = (Bool, NSDictionary?, URLResponse?, Error?) -> (Void)
 
 class NetworkInterface: NSObject {
     
-    static func fetchJSON(_ requestType:HumOSRequestType , headers:NSDictionary? , requestCompletionHander:@escaping HumOSRequestCompletionType)  {
+    static func fetchJSON(_ requestType:Opi9RequestType , headers:NSDictionary? , requestCompletionHander:@escaping Opi9RequestCompletionType)  {
         
-        self.sendAsyncRequest(HumOSNetworkRequests.getRequestofType(requestType, headers: headers)) { (success, json, response, error) -> (Void) in
+        self.sendAsyncRequest(Opi9NetworkRequests.getRequestofType(requestType, headers: headers)) { (success, json, response, error) -> (Void) in
             if (success == true && response != nil) {
                 
                 let httpResponse:HTTPURLResponse = response as! HTTPURLResponse
@@ -34,16 +34,16 @@ class NetworkInterface: NSObject {
                     break
                     
                 case 204:
-                    requestCompletionHander(false, nil, response, HumOSNetworkError.httpStatus204)
+                    requestCompletionHander(false, nil, response, Opi9NetworkError.httpStatus204)
                     break
                 case 404:
-                    requestCompletionHander(false,nil,response,HumOSNetworkError.httpStatus404)
+                    requestCompletionHander(false,nil,response,Opi9NetworkError.httpStatus404)
                     break
                 case 410:
-                    requestCompletionHander(false, nil, response, HumOSNetworkError.httpStatus410)
+                    requestCompletionHander(false, nil, response, Opi9NetworkError.httpStatus410)
                     break
                 default:
-                    requestCompletionHander(false,nil,response,HumOSNetworkError.httpStatusUnknownError)
+                    requestCompletionHander(false,nil,response,Opi9NetworkError.httpStatusUnknownError)
                     break
                 }
             }
@@ -54,11 +54,11 @@ class NetworkInterface: NSObject {
         }
     }
     
-    static func fetchJSON(_ requestType:HumOSRequestType , headers:NSDictionary?, payload :[String:Any]  , requestCompletionHander:@escaping HumOSRequestCompletionType) {
+    static func fetchJSON(_ requestType:Opi9RequestType , headers:NSDictionary?, payload :[String:Any]  , requestCompletionHander:@escaping Opi9RequestCompletionType) {
         let priority = DispatchQueue.GlobalQueuePriority.default
         DispatchQueue.global(priority: priority).async {
             //TODO: Implement the cases for HTTP Code as for GET and TEST
-            self.sendAsyncRequest(HumOSNetworkRequests.postRequestofType(requestType, headers:headers, payload: payload  ), completionHandler: { (suc, json, response, error) -> (Void) in
+            self.sendAsyncRequest(Opi9NetworkRequests.postRequestofType(requestType, headers:headers, payload: payload  ), completionHandler: { (suc, json, response, error) -> (Void) in
                 let succcess = (json != nil)
                 requestCompletionHander(succcess,json, response,error)
                 
@@ -66,7 +66,7 @@ class NetworkInterface: NSObject {
         }
     }
     
-//    static func upload(_ requestType:HumOSRequestType , queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?, media:Array<MPMedia>, requestCompletionHander:@escaping HumOSRequestCompletionType) {
+//    static func upload(_ requestType:HumOSRequestType , queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?, media:Array<MPMedia>, requestCompletionHander:@escaping Opi9RequestCompletionType) {
 //        let priority = DispatchQueue.GlobalQueuePriority.default
 //        DispatchQueue.global(priority: priority).async {
 //            //TODO: Implement the cases for HTTP Code as for GET and TEST
@@ -80,7 +80,7 @@ class NetworkInterface: NSObject {
 //    }
     
     
-    static fileprivate func sendAsyncRequest(_ request:URLRequest, completionHandler:@escaping HumOSRequestCompletionType) {
+    static fileprivate func sendAsyncRequest(_ request:URLRequest, completionHandler:@escaping Opi9RequestCompletionType) {
         let queue:OperationQueue = OperationQueue()
         
         NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) in

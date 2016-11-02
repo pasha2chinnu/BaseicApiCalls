@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        signInUser()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +23,20 @@ class ViewController: UIViewController {
     }
 
 
+    func signInUser(){
+        
+        let params = ["email" :"niranjan@gmail.com",
+                      "password" : "1"]
+        NetworkInterface.fetchJSON(.signin, headers: params as NSDictionary?, requestCompletionHander: {(success, data, response,error) in
+        
+            if success == true, let data = data{
+
+            
+                DispatchQueue.main.async {
+            
+                }
+            }
+        })
+    }
 }
 

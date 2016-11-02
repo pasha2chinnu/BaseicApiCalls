@@ -8,9 +8,11 @@
 
 import Foundation
 
-enum HumOSRequestType {
+enum Opi9RequestType {
 
-    case login
+    case signup
+    case signin
+    /*
     case connectedUsersDetails
     case downloadMessage
     case createPatient
@@ -31,8 +33,7 @@ enum HumOSRequestType {
     case createPetBlob
     case updatePet
     case encrypty
-    case signup
-
+    */
    
 }
 
@@ -43,6 +44,7 @@ enum HumOSRequestType {
 struct RequestConstants {
     
     static let providerURL = "https://quiet-reef-36650.herokuapp.com"
+    /*
     static let appEndPoint = "/api"
     static let version1 = "/v1"
     static let sikkasoftURL = "https://api.sikkasoft.com"
@@ -52,15 +54,23 @@ struct RequestConstants {
     static let Sikka_App_Key = "8003044355153fe930ec82ca091e334e"
     static let Sikka_App_ID = "cf345eef7cb42a39cff6972d57fe6149"
     static let aws_staging_url = "http://staging.qj5jtkpxr4.us-west-2.elasticbeanstalk.com"
+ */
 }
 
-class HumOSNetworkRequests {
+class Opi9NetworkRequests {
     
     // GET Requests
-    static func getRequestofType(_ requestType:HumOSRequestType, headers:NSDictionary?) -> URLRequest {
+    static func getRequestofType(_ requestType:Opi9RequestType, headers:NSDictionary?) -> URLRequest {
         var request:URLRequest!
         switch requestType {
             
+        case .signin:
+            let authPath = "/users/signin.json"
+            let url = RequestConstants.providerURL + authPath
+            request = self.createGETRequest(url, headers:headers)
+            break
+            
+       /*
         case .downloadMessage:
             let endpoint = "/api/v3/messages"
             let url = RequestConstants.aws_staging_url + endpoint
@@ -82,19 +92,20 @@ class HumOSNetworkRequests {
             let url = RequestConstants.aws_staging_url + endpoint
             request = createGETRequest(url, headers: headers)
             break
-            
+            /*
         case .petIndex:
             let endPoint = "/pets"
             let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
             request = createGETRequest(url, headers: headers)
             break
-            
+            */
         case .encrypty:
             let endpoint = "/auth/v2/encrypt"
+          //  let url = RequestConstants.sikkasoftURL + endpoint
             let url = RequestConstants.sikkasoftURL + endpoint
             request = createGETRequest(url, headers:headers)
             break
-            
+            */
         default:
             break
         }
@@ -103,21 +114,22 @@ class HumOSNetworkRequests {
     }
     
     // POST Requests
-    static func postRequestofType(_ requestType:HumOSRequestType, headers:NSDictionary?, payload :[String:Any]? ) -> URLRequest {
+    static func postRequestofType(_ requestType:Opi9RequestType, headers:NSDictionary?, payload :[String:Any]? ) -> URLRequest {
         var request:URLRequest!
         switch requestType {
+    /*
         case .createPatient:
             let endPoint = "/auth/v2/patient_accounts/patient_account"
             let url = RequestConstants.sikkasoftURL + endPoint
             request = createPOSTRequest(url, headers: headers, payload: payload!)
             break
-    
+    */
         case .signup:
             let endPoint = "/users/signup.json"
-            let url = RequestConstants.sikkasoftURL + endPoint
+            let url = RequestConstants.providerURL + endPoint
             request = createPOSTRequest(url, headers: headers, payload: payload!)
             break
-        
+        /*
         case .createSignUpVerificationCode:
             let endPoint = "/create_verification_code"
             let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
@@ -135,7 +147,6 @@ class HumOSNetworkRequests {
             let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
             request = createPOSTRequestWithFormData(url, headers: headers, payload: payload! as NSDictionary?)
             break
-            
 
         case .newMessage:
             let endpoint = "/api/v3/messages"
@@ -178,13 +189,13 @@ class HumOSNetworkRequests {
             let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint + "/" + (headers?["documentId"] as! String)
             request = createPOSTRequest(url, headers: headers, payload: payload!)
             break
-            
+            */
         default:
             break
         }
         return request
     }
-    
+/*
     static func uploadRequestofType(_ requestType:HumOSRequestType,queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?,media : Array<MPMedia> ) -> URLRequest {
         var request:URLRequest!
         switch requestType {
@@ -213,9 +224,9 @@ class HumOSNetworkRequests {
         }
         return request
     }
-
+*/
     
-    static func createGETRequest(_ SikkaURL:String , headers:NSDictionary?) -> URLRequest {
+    static func createGETRequest(_ Opi9URL:String , headers:NSDictionary?) -> URLRequest {
         var headerAsString:String = ""
         
         if (headers != nil && headers!.count > 0) {
@@ -230,7 +241,7 @@ class HumOSNetworkRequests {
             
         }
         
-        let fullUrlString = SikkaURL + headerAsString;
+        let fullUrlString = Opi9URL + headerAsString;
         let url = URL(string: fullUrlString)
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "GET"
@@ -239,7 +250,7 @@ class HumOSNetworkRequests {
         return request as URLRequest
     }
     
-    static func createPOSTRequest(_ SikkaURL:String ,headers:NSDictionary?, payload:[String:Any]) -> URLRequest {
+    static func createPOSTRequest(_ Opi9URL:String ,headers:NSDictionary?, payload:[String:Any]) -> URLRequest {
         var headerAsString:String = ""
         
         if (headers != nil && headers!.count > 0) {
@@ -255,7 +266,7 @@ class HumOSNetworkRequests {
         
         print(headers)
         
-        let fullUrlString = SikkaURL + headerAsString;
+        let fullUrlString = Opi9URL + headerAsString;
         let url = URL(string: fullUrlString)
         let request = NSMutableURLRequest(url: url!)
         
@@ -276,7 +287,7 @@ class HumOSNetworkRequests {
         return request as URLRequest
     }
     
-    static func createPOSTRequestWithFormData(_ SikkaURL:String ,headers:NSDictionary?, payload:NSDictionary?) -> URLRequest {
+    static func createPOSTRequestWithFormData(_ Opi9URL:String ,headers:NSDictionary?, payload:NSDictionary?) -> URLRequest {
         var headerAsString:String = ""
         
         if (headers != nil && headers!.count > 0) {
@@ -292,7 +303,7 @@ class HumOSNetworkRequests {
         
         print(headers)
         
-        let fullUrlString = SikkaURL + headerAsString;
+        let fullUrlString = Opi9URL + headerAsString;
         let url = URL(string: fullUrlString)
         let request = NSMutableURLRequest(url: url!)
         
@@ -322,7 +333,7 @@ class HumOSNetworkRequests {
     }
     
     
-    static func createDELETERequest(_ SikkaURL:String , headers:NSDictionary?) -> URLRequest {
+    static func createDELETERequest(_ Opi9URL:String , headers:NSDictionary?) -> URLRequest {
         var headerAsString:String = ""
         
         if (headers != nil && headers!.count > 0) {
@@ -337,7 +348,7 @@ class HumOSNetworkRequests {
             
         }
         
-        let fullUrlString = SikkaURL + headerAsString;
+        let fullUrlString = Opi9URL + headerAsString;
         let url = URL(string: fullUrlString)
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "DELETE"
@@ -346,7 +357,7 @@ class HumOSNetworkRequests {
         return request as URLRequest
     }
     
-    static func createPUTRequest(_ SikkaURL:String ,headers:NSDictionary?, payload:NSDictionary?) -> URLRequest {
+    static func createPUTRequest(_ Opi9URL:String ,headers:NSDictionary?, payload:NSDictionary?) -> URLRequest {
         var headerAsString:String = ""
         
         if (headers != nil && headers!.count > 0) {
@@ -362,7 +373,7 @@ class HumOSNetworkRequests {
         
         print(headers)
         
-        let fullUrlString = SikkaURL + headerAsString;
+        let fullUrlString = Opi9URL + headerAsString;
         let url = URL(string: fullUrlString)
         let request = NSMutableURLRequest(url: url!)
         
@@ -380,7 +391,7 @@ class HumOSNetworkRequests {
         request.httpShouldHandleCookies=false
         return request as URLRequest
     }
-    
+   /*
     static func createMultiPartPOSTRequest(_ SikkaURL:String ,queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?,media : Array<MPMedia>) -> URLRequest {
         var headerAsString:String = ""
         
@@ -439,6 +450,6 @@ class HumOSNetworkRequests {
         }
         return body as Data
     }
-    
+*/
     
 }
