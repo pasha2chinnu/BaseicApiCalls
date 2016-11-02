@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        signInUser()
+//        signInUser()
 
     }
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+/*
     func signInUser(){
         
         let params = ["email" :"niranjan@gmail.com",
@@ -38,5 +38,6 @@ class ViewController: UIViewController {
             }
         })
     }
+ */
 }
 

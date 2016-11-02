@@ -54,7 +54,7 @@ struct RequestConstants {
     static let Sikka_App_Key = "8003044355153fe930ec82ca091e334e"
     static let Sikka_App_ID = "cf345eef7cb42a39cff6972d57fe6149"
     static let aws_staging_url = "http://staging.qj5jtkpxr4.us-west-2.elasticbeanstalk.com"
- */
+     */
 }
 
 class Opi9NetworkRequests {
