@@ -338,36 +338,17 @@
                                             <constraint firstAttribute="height" constant="33" id="vzp-yQ-EaX"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-8O-3sf">
-                                        <rect key="frame" x="35" y="6" width="115" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="PZp-UP-5Xv"/>
-                                            <constraint firstAttribute="width" constant="115" id="WHE-LQ-ij4"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiF-GE-YoL">
-                                        <rect key="frame" x="5" y="36" width="150" height="1"/>
+                                        <rect key="frame" x="5" y="36" width="145" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aZN-3g-fL2"/>
-                                            <constraint firstAttribute="width" constant="150" id="pXp-CJ-ubi"/>
+                                            <constraint firstAttribute="width" constant="145" id="pXp-CJ-ubi"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPf-GL-DP9">
                                         <rect key="frame" x="155" y="36" width="145" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="145" id="ETa-Je-wEx"/>
-                                            <constraint firstAttribute="height" constant="1" id="Uws-Ec-hJ7"/>
-                                        </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-gO-v1l">
                                         <rect key="frame" x="155" y="2" width="120" height="30"/>
@@ -377,7 +358,22 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14Q-pK-bFo">
+                                        <rect key="frame" x="35" y="6" width="115" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="HwN-Dj-HN4"/>
+                                            <constraint firstAttribute="height" constant="30" id="Lsd-je-4Gw"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -387,24 +383,24 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YPf-GL-DP9" secondAttribute="trailing" id="0FS-Ek-fvz"/>
+                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="top" secondItem="YPf-GL-DP9" secondAttribute="top" id="7uN-B0-9ys"/>
                                     <constraint firstItem="GXJ-Qu-GqJ" firstAttribute="top" secondItem="Lzx-R0-lxU" secondAttribute="top" constant="4" id="ApF-sP-08k"/>
-                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="155" id="Awr-zh-YO5"/>
-                                    <constraint firstItem="rY1-8O-3sf" firstAttribute="top" secondItem="Lzx-R0-lxU" secondAttribute="top" constant="6" id="GEY-1z-n4j"/>
+                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="leading" secondItem="L8i-gO-v1l" secondAttribute="leading" id="DsO-X5-pm8"/>
+                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="35" id="EEx-xs-f4G"/>
                                     <constraint firstItem="GXJ-Qu-GqJ" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" id="Heh-Y8-tCe"/>
-                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="top" secondItem="rY1-8O-3sf" secondAttribute="bottom" id="Pcr-bi-CFG"/>
-                                    <constraint firstItem="rY1-8O-3sf" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="35" id="SMf-u9-IZm"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="5" id="TnT-wn-2eI"/>
-                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="top" secondItem="L8i-gO-v1l" secondAttribute="bottom" constant="4" id="WwO-WU-b3V"/>
-                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="top" secondItem="rY1-8O-3sf" secondAttribute="bottom" id="Y0p-Jx-Jdp"/>
-                                    <constraint firstAttribute="trailing" secondItem="LiF-GE-YoL" secondAttribute="trailing" constant="145" id="ZUj-KD-IDT"/>
+                                    <constraint firstAttribute="trailing" secondItem="L8i-gO-v1l" secondAttribute="trailing" constant="25" id="UaB-ja-paf"/>
+                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="centerY" secondItem="GXJ-Qu-GqJ" secondAttribute="centerY" id="YQ7-eQ-hAZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LiF-GE-YoL" secondAttribute="trailing" constant="150" id="ZUj-KD-IDT"/>
+                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="bottom" secondItem="YPf-GL-DP9" secondAttribute="bottom" id="eZI-CK-47o"/>
+                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="bottom" secondItem="GXJ-Qu-GqJ" secondAttribute="bottom" id="gPi-8d-b1v"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="5" id="iBX-xf-tzw"/>
-                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="top" secondItem="rY1-8O-3sf" secondAttribute="bottom" id="mVv-jc-JJ3"/>
-                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="top" secondItem="rY1-8O-3sf" secondAttribute="bottom" id="pMu-me-fcA"/>
+                                    <constraint firstAttribute="trailing" secondItem="L8i-gO-v1l" secondAttribute="trailing" constant="25" id="mL8-iS-K9l"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="5" id="sdJ-80-xDa"/>
-                                    <constraint firstItem="L8i-gO-v1l" firstAttribute="leading" secondItem="rY1-8O-3sf" secondAttribute="trailing" constant="5" id="tOw-My-k0n"/>
+                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="trailing" secondItem="LiF-GE-YoL" secondAttribute="trailing" id="t28-1I-lel"/>
                                     <constraint firstAttribute="height" constant="40" id="yAx-ub-RMW"/>
                                     <constraint firstItem="L8i-gO-v1l" firstAttribute="top" secondItem="Lzx-R0-lxU" secondAttribute="top" constant="2" id="yGe-ez-fal"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPf-GL-DP9" secondAttribute="trailing" id="zmQ-zO-u9x"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAi-J5-oMN">
@@ -743,7 +739,7 @@
                         <outlet property="emailTextfield" destination="266-DB-7cp" id="5YZ-c8-gS3"/>
                         <outlet property="femaleLabel" destination="cHw-bi-nLb" id="lDx-5v-rBt"/>
                         <outlet property="femaleRadioButton" destination="Hfb-oV-JEc" id="qu0-4R-hdp"/>
-                        <outlet property="firstnameTextfield" destination="rY1-8O-3sf" id="yq0-Jg-Mx9"/>
+                        <outlet property="firstnameTextfield" destination="14Q-pK-bFo" id="gOV-81-7Tm"/>
                         <outlet property="genderLabel" destination="FGy-Wg-XLv" id="bM3-Kl-Tvv"/>
                         <outlet property="interestedRadioButton" destination="YiX-NW-Xh8" id="lhh-Un-Aj2"/>
                         <outlet property="lastnameTextfield" destination="L8i-gO-v1l" id="EdG-3c-NYk"/>
