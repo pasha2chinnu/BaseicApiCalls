@@ -23,6 +23,7 @@
 		9B70AF4E1DC3965800ED5886 /* Opi9Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4B1DC3965800ED5886 /* Opi9Error.swift */; };
 		9B70AF4F1DC3965800ED5886 /* Opi9NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4C1DC3965800ED5886 /* Opi9NetworkRequests.swift */; };
 		9B70AF501DC3965800ED5886 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4D1DC3965800ED5886 /* NetworkInterface.swift */; };
+		9B967A4F1DCC855400C403A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B967A4E1DCC855400C403A2 /* HomeViewController.swift */; };
 		D8418ED0FEE29770360ED34C /* libPods-Opi9UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD0EEBD952F5D3CA021F761 /* libPods-Opi9UITests.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		9B70AF4B1DC3965800ED5886 /* Opi9Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opi9Error.swift; sourceTree = "<group>"; };
 		9B70AF4C1DC3965800ED5886 /* Opi9NetworkRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opi9NetworkRequests.swift; sourceTree = "<group>"; };
 		9B70AF4D1DC3965800ED5886 /* NetworkInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		9B967A4E1DCC855400C403A2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ACD0EEBD952F5D3CA021F761 /* libPods-Opi9UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Opi9UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA175EB72C9C5183959D0C2 /* Pods-Opi9UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opi9UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opi9UITests/Pods-Opi9UITests.release.xcconfig"; sourceTree = "<group>"; };
 		DFF7F1951F4699A40761567A /* Pods-Opi9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opi9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opi9/Pods-Opi9.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				9B19E1071DC2086F0040E065 /* ViewController.swift */,
 				9B19E1341DC208D90040E065 /* SignUpViewController.swift */,
 				9B23918A1DC9E6BC00F59146 /* SignInViewController.swift */,
+				9B967A4E1DCC855400C403A2 /* HomeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				9B70AF501DC3965800ED5886 /* NetworkInterface.swift in Sources */,
 				9B19E1081DC2086F0040E065 /* ViewController.swift in Sources */,
 				9B23918B1DC9E6BC00F59146 /* SignInViewController.swift in Sources */,
+				9B967A4F1DCC855400C403A2 /* HomeViewController.swift in Sources */,
 				9B70AF4F1DC3965800ED5886 /* Opi9NetworkRequests.swift in Sources */,
 				9B19E1061DC2086F0040E065 /* AppDelegate.swift in Sources */,
 				9B19E1381DC209260040E065 /* Opi9ApiCalls.swift in Sources */,

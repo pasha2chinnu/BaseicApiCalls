@@ -328,6 +328,23 @@
                                             <constraint firstAttribute="height" constant="33" id="vzp-yQ-EaX"/>
                                         </constraints>
                                     </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14Q-pK-bFo">
+                                        <rect key="frame" x="29" y="7" width="115" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="HwN-Dj-HN4"/>
+                                            <constraint firstAttribute="height" constant="30" id="Lsd-je-4Gw"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiF-GE-YoL">
                                         <rect key="frame" x="5" y="36" width="145" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -340,29 +357,10 @@
                                         <rect key="frame" x="155" y="36" width="145" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-gO-v1l">
-                                        <rect key="frame" x="155" y="6" width="120" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-gO-v1l">
+                                        <rect key="frame" x="155" y="6" width="115" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="DWT-yq-ni1"/>
-                                            <constraint firstAttribute="height" constant="30" id="Dgh-bs-Hyf"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14Q-pK-bFo">
-                                        <rect key="frame" x="35" y="6" width="120" height="30"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="HwN-Dj-HN4"/>
-                                            <constraint firstAttribute="height" constant="30" id="Lsd-je-4Gw"/>
-                                        </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -375,23 +373,22 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="top" secondItem="YPf-GL-DP9" secondAttribute="top" id="7uN-B0-9ys"/>
+                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="bottom" secondItem="LiF-GE-YoL" secondAttribute="bottom" id="3SJ-0C-NtG"/>
                                     <constraint firstItem="GXJ-Qu-GqJ" firstAttribute="top" secondItem="Lzx-R0-lxU" secondAttribute="top" constant="4" id="ApF-sP-08k"/>
-                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="leading" secondItem="L8i-gO-v1l" secondAttribute="leading" id="DsO-X5-pm8"/>
-                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="35" id="EEx-xs-f4G"/>
+                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="29" id="EEx-xs-f4G"/>
                                     <constraint firstItem="GXJ-Qu-GqJ" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" id="Heh-Y8-tCe"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPf-GL-DP9" secondAttribute="trailing" id="PSP-Bh-zjV"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="5" id="TnT-wn-2eI"/>
-                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="centerY" secondItem="GXJ-Qu-GqJ" secondAttribute="centerY" id="YQ7-eQ-hAZ"/>
+                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="centerY" secondItem="GXJ-Qu-GqJ" secondAttribute="centerY" constant="1.5" id="YQ7-eQ-hAZ"/>
+                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="top" secondItem="L8i-gO-v1l" secondAttribute="bottom" id="Z0z-nV-5t2"/>
                                     <constraint firstAttribute="trailing" secondItem="LiF-GE-YoL" secondAttribute="trailing" constant="150" id="ZUj-KD-IDT"/>
-                                    <constraint firstItem="LiF-GE-YoL" firstAttribute="bottom" secondItem="YPf-GL-DP9" secondAttribute="bottom" id="eZI-CK-47o"/>
+                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="top" secondItem="LiF-GE-YoL" secondAttribute="top" id="aDz-0w-6hb"/>
+                                    <constraint firstItem="L8i-gO-v1l" firstAttribute="leading" secondItem="YPf-GL-DP9" secondAttribute="leading" id="fnN-8T-VHu"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="bottom" secondItem="GXJ-Qu-GqJ" secondAttribute="bottom" id="gPi-8d-b1v"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="5" id="iBX-xf-tzw"/>
-                                    <constraint firstAttribute="trailing" secondItem="L8i-gO-v1l" secondAttribute="trailing" constant="25" id="mL8-iS-K9l"/>
+                                    <constraint firstItem="YPf-GL-DP9" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="155" id="r4y-lb-l9B"/>
                                     <constraint firstItem="LiF-GE-YoL" firstAttribute="leading" secondItem="Lzx-R0-lxU" secondAttribute="leading" constant="5" id="sdJ-80-xDa"/>
-                                    <constraint firstItem="14Q-pK-bFo" firstAttribute="trailing" secondItem="LiF-GE-YoL" secondAttribute="trailing" constant="5" id="t28-1I-lel"/>
                                     <constraint firstAttribute="height" constant="40" id="yAx-ub-RMW"/>
-                                    <constraint firstItem="L8i-gO-v1l" firstAttribute="top" secondItem="Lzx-R0-lxU" secondAttribute="top" constant="6" id="yGe-ez-fal"/>
-                                    <constraint firstAttribute="trailing" secondItem="YPf-GL-DP9" secondAttribute="trailing" id="zmQ-zO-u9x"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAi-J5-oMN">
@@ -723,6 +720,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqj-zl-LzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2485.5999999999999" y="135.38230884557723"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="sFh-sF-reW">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Oyx-aw-mVF" customClass="HomeViewController" customModule="Opi9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Yw-Ps-lKF"/>
+                        <viewControllerLayoutGuide type="bottom" id="OAz-Mh-W0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OxY-ed-bvC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wo0-9U-WDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8yW-Nr-uoN">

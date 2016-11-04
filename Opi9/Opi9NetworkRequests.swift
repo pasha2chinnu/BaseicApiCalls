@@ -12,28 +12,7 @@ enum Opi9RequestType {
 
     case signup
     case signin
-    /*
-    case connectedUsersDetails
-    case downloadMessage
-    case createPatient
-    case createSignUpVerificationCode
-    case validateVerificationCode
-    case registerUser
-    case newMessage
-    case sendPushMessage
-    case forgetPasswordLinkGeneration
-    case forgetPasswordValidation
-    case createImageMessage
-    case createVideoMessage
-    case createVideoThumbnail
-    case homePageCards
-    case createCard
-    case createPet
-    case petIndex
-    case createPetBlob
-    case updatePet
-    case encrypty
-    */
+    case listAllUsers
    
 }
 
@@ -70,42 +49,8 @@ class Opi9NetworkRequests {
             request = self.createGETRequest(url, headers:headers)
             break
             
-       /*
-        case .downloadMessage:
-            let endpoint = "/api/v3/messages"
-            let url = RequestConstants.aws_staging_url + endpoint
-            request = createGETRequest(url, headers:headers)
-            break
-        
-        case .login:
-
             
-            let authPath = "/api/v3/users/signin"
-            let endpoint = RequestConstants.aws_staging_url + authPath
-
             
-            request = self.createGETRequest(endpoint, headers:headers)
-            
-            break
-        case .connectedUsersDetails:
-            let endpoint = "/api/v3/connections"
-            let url = RequestConstants.aws_staging_url + endpoint
-            request = createGETRequest(url, headers: headers)
-            break
-            /*
-        case .petIndex:
-            let endPoint = "/pets"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createGETRequest(url, headers: headers)
-            break
-            */
-        case .encrypty:
-            let endpoint = "/auth/v2/encrypt"
-          //  let url = RequestConstants.sikkasoftURL + endpoint
-            let url = RequestConstants.sikkasoftURL + endpoint
-            request = createGETRequest(url, headers:headers)
-            break
-            */
         default:
             break
         }
