@@ -2,8 +2,8 @@
 //  HumOSNetworkRequests.swift
 //  HumOS
 //
-//  Created by Nandu Ahmed on 8/30/16.
-//  Copyright © 2016 Sikka Software. All rights reserved.
+//  Created by kvanadev5 on 27/10/16.
+//  Copyright © 2016 kvanadev5. All rights reserved.
 //
 
 import Foundation
@@ -22,18 +22,8 @@ enum Opi9RequestType {
 
 struct RequestConstants {
     
-    static let providerURL = "https://quiet-reef-36650.herokuapp.com"
-    /*
-    static let appEndPoint = "/api"
-    static let version1 = "/v1"
-    static let sikkasoftURL = "https://api.sikkasoft.com"
-    
-    static let trueVaultBaseURL = "https://api.truevault.com"
-    
-    static let Sikka_App_Key = "8003044355153fe930ec82ca091e334e"
-    static let Sikka_App_ID = "cf345eef7cb42a39cff6972d57fe6149"
-    static let aws_staging_url = "http://staging.qj5jtkpxr4.us-west-2.elasticbeanstalk.com"
-     */
+    static let providerURL = ""
+   
 }
 
 class Opi9NetworkRequests {
@@ -65,7 +55,7 @@ class Opi9NetworkRequests {
     /*
         case .createPatient:
             let endPoint = "/auth/v2/patient_accounts/patient_account"
-            let url = RequestConstants.sikkasoftURL + endPoint
+            let url = RequestConstants.siksoftURL + endPoint
             request = createPOSTRequest(url, headers: headers, payload: payload!)
             break
     */
@@ -74,67 +64,7 @@ class Opi9NetworkRequests {
             let url = RequestConstants.providerURL + endPoint
             request = createPOSTRequest(url, headers: headers, payload: payload!)
             break
-        /*
-        case .createSignUpVerificationCode:
-            let endPoint = "/create_verification_code"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-        
-        case .validateVerificationCode:
-            let endPoint = "/validate_verification_code"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-            
-        case .registerUser:
-            let endPoint = "/users"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequestWithFormData(url, headers: headers, payload: payload! as NSDictionary?)
-            break
-
-        case .newMessage:
-            let endpoint = "/api/v3/messages"
-            let url = RequestConstants.aws_staging_url + endpoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-        case .sendPushMessage:
-            let endpoint = "/push_notification"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endpoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-        case .forgetPasswordLinkGeneration:
-            let endPoint = "/create_verification_link"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequestWithFormData(url, headers: headers, payload: payload as NSDictionary?)
-            break
-        case .forgetPasswordValidation:
-            let endPoint = "/forgot_password"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-            
-        case .homePageCards:
-            let endPoint = "/cards/search"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-        case .createCard:
-            let endPoint = "/cards"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-        case .createPet:
-            let endPoint = "/pets"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-        case .updatePet:
-            let endPoint = "/pets"
-            let url = RequestConstants.providerURL + RequestConstants.appEndPoint + requestType.useAppVersion() + endPoint + "/" + (headers?["documentId"] as! String)
-            request = createPOSTRequest(url, headers: headers, payload: payload!)
-            break
-            */
+      
         default:
             break
         }
@@ -337,7 +267,7 @@ class Opi9NetworkRequests {
         return request as URLRequest
     }
    /*
-    static func createMultiPartPOSTRequest(_ SikkaURL:String ,queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?,media : Array<MPMedia>) -> URLRequest {
+    static func createMultiPartPOSTRequest(_ SikURL:String ,queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?,media : Array<MPMedia>) -> URLRequest {
         var headerAsString:String = ""
         
         let boundary = generateBoundaryString()
@@ -355,7 +285,7 @@ class Opi9NetworkRequests {
         
         print(queryParams)
         
-        let fullUrlString = SikkaURL + headerAsString;
+        let fullUrlString = SikURL + headerAsString;
         let url = URL(string: fullUrlString)
         let request = NSMutableURLRequest(url: url!)
         

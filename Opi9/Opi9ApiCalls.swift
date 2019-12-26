@@ -10,7 +10,7 @@ import UIKit
 
 class Opi9ApiCalls: NSObject {
     static let sharedInstance = Opi9ApiCalls()
-    let baseurl = "https://quiet-reef-36650.herokuapp.com"
+    let baseurl = ""
 
     
   /*
