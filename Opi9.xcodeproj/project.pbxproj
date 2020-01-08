@@ -17,7 +17,6 @@
 		9B19E11B1DC2086F0040E065 /* Opi9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19E11A1DC2086F0040E065 /* Opi9Tests.swift */; };
 		9B19E1261DC2086F0040E065 /* Opi9UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19E1251DC2086F0040E065 /* Opi9UITests.swift */; };
 		9B19E1351DC208D90040E065 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19E1341DC208D90040E065 /* SignUpViewController.swift */; };
-		9B19E1381DC209260040E065 /* Opi9ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19E1371DC209260040E065 /* Opi9ApiCalls.swift */; };
 		9B19E13A1DC2127A0040E065 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9B19E1391DC2127A0040E065 /* .gitignore */; };
 		9B23918B1DC9E6BC00F59146 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B23918A1DC9E6BC00F59146 /* SignInViewController.swift */; };
 		9B70AF4E1DC3965800ED5886 /* Opi9Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70AF4B1DC3965800ED5886 /* Opi9Error.swift */; };
@@ -65,7 +64,6 @@
 		9B19E1251DC2086F0040E065 /* Opi9UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opi9UITests.swift; sourceTree = "<group>"; };
 		9B19E1271DC2086F0040E065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B19E1341DC208D90040E065 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		9B19E1371DC209260040E065 /* Opi9ApiCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opi9ApiCalls.swift; sourceTree = "<group>"; };
 		9B19E1391DC2127A0040E065 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9B23918A1DC9E6BC00F59146 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9B70AF4B1DC3965800ED5886 /* Opi9Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opi9Error.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		9B19E1361DC208F20040E065 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				9B19E1371DC209260040E065 /* Opi9ApiCalls.swift */,
 				9B70AF4B1DC3965800ED5886 /* Opi9Error.swift */,
 				9B70AF4C1DC3965800ED5886 /* Opi9NetworkRequests.swift */,
 				9B70AF4D1DC3965800ED5886 /* NetworkInterface.swift */,
@@ -302,6 +299,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -496,7 +494,6 @@
 				9B967A4F1DCC855400C403A2 /* HomeViewController.swift in Sources */,
 				9B70AF4F1DC3965800ED5886 /* Opi9NetworkRequests.swift in Sources */,
 				9B19E1061DC2086F0040E065 /* AppDelegate.swift in Sources */,
-				9B19E1381DC209260040E065 /* Opi9ApiCalls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,7 +652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kvana.Opi9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -670,7 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kvana.Opi9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -684,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kvana.Opi9Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Opi9.app/Opi9";
 			};
 			name = Debug;
@@ -699,7 +696,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kvana.Opi9Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Opi9.app/Opi9";
 			};
 			name = Release;
@@ -713,7 +710,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kvana.Opi9UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Opi9;
 			};
 			name = Debug;
@@ -727,7 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kvana.Opi9UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Opi9;
 			};
 			name = Release;

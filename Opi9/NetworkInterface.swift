@@ -1,8 +1,4 @@
 
-//
-//  Created by kvanadev5 on 27/10/16.
-//  Copyright © 2016 kvanadev5. All rights reserved.
-//
 
 import Foundation
 
@@ -64,18 +60,7 @@ class NetworkInterface: NSObject {
         }
     }
     
-//    static func upload(_ requestType:HumOSRequestType , queryParams:NSDictionary?, headers:NSDictionary?, payload:NSDictionary?, media:Array<MPMedia>, requestCompletionHander:@escaping Opi9RequestCompletionType) {
-//        let priority = DispatchQueue.GlobalQueuePriority.default
-//        DispatchQueue.global(priority: priority).async {
-//            //TODO: Implement the cases for HTTP Code as for GET and TEST
-//            self.sendAsyncRequest(HumOSNetworkRequests.uploadRequestofType(requestType, queryParams: queryParams, headers: headers, payload: payload, media: media ), completionHandler: { (suc, json, response, error) -> (Void) in
-//                let succcess = (json != nil)
-//                requestCompletionHander(succcess,json, response,error)
-//                
-//            })
-//            
-//        }
-//    }
+
     
     
     static fileprivate func sendAsyncRequest(_ request:URLRequest, completionHandler:@escaping Opi9RequestCompletionType) {
